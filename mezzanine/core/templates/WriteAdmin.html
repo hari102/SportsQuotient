@@ -1,0 +1,113 @@
+
+{% extends "admin/base_site.html" %}
+
+{% load i18n mezzanine_tags staticfiles %}
+
+{% block extrahead %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static settings.MEZZANINE_ADMIN_PREFIX|add:"css/dashboard.css" %}">
+
+<link rel="stylesheet" href="{% static "mezzanine/css/admin/dashboard.css" %}">
+
+
+<!--[if IE 7]><style>.dashboard #content {padding-top: 80px;}</style><![endif]-->
+{% endblock %}
+{% block coltype %}colMS{% endblock %}
+
+{% block content_title %}  
+
+<h1>
+ 
+{% trans "SQ Dashboard"  %} 
+ 
+</h1> 
+{% endblock %}
+
+{% block bodyclass %}
+<a href="/admin/blog/blogpost/" class="btn btn-default btn-lg btn-block" role="button">Block level button</a>
+dashboard
+{% endblock %}
+
+{% block breadcrumbs %}<div class="breadcrumbs">{% trans "Home" %}</div>{% endblock %}
+
+{% block content %}
+<!-- <div id="content-main"> -->
+
+<link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+<p>
+<div class="row">
+<div class="col-md-6">
+
+<a href="Add" class="btn btn-primary btn-block"> <tbf> Create a new Post </tbf> </a>
+
+</div>
+
+<div class="col-md-6">
+<a href="/admin/blog/blogpost/" class="btn btn-success btn-block"> <tbf> Continue working on Saved Draft </tbf> </a>
+</div>
+
+</div>
+</p>
+<p>
+<div class="row">
+ <div class="col-md-6">
+ 
+ <a href="/admin/WritingEssentials" class="btn btn-warning btn-block"> <tbf> Writing Essentials </tbf> </a>
+
+ 
+ </div>
+ 
+ <div class="col-md-6">
+
+ <a href="/admin/Question" class="btn btn-danger btn-block"> <tbf> Have a question? </tbf> </a>
+
+ </div>
+ 
+ </div>
+</p>
+
+<p>
+<div class="row">
+ <div class="col-md-6">
+ 
+ <button type="button" class="btn btn-primary btn-block"> Your Stats </button>
+ 
+ </div>
+ 
+ <div class="col-md-6">
+
+<a href="/admin/Readership" class="btn btn-success btn-block"> <tbf> How to increase your readership </tbf> </a>
+
+ </div>
+ 
+ </div>
+</p>
+
+<p>
+<div class="row">
+ <div class="col-md-6">
+ 
+<a href="/admin/Suggestions" class="btn btn-warning btn-block"> <tbf> Suggestions? </tbf> </a>
+
+
+ </div>
+ 
+ <div class="col-md-6">
+ <button type="button" class="btn btn-danger btn-block"> Need to miss a post?</button>
+ </div>
+ 
+ </div>
+</p>
+
+<p>
+  <button type="button" class="btn btn-info btn-block"> Request a change in writing </button>
+</p>
+<!-- </div> -->
+
+{% endblock %}
+
+<!--
+{% block sidebar %}
+
+{% endblock %}
+-->
